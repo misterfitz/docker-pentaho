@@ -6,8 +6,8 @@ FROM java:7
 MAINTAINER Wellington Marinho wpmarinho@globo.com
 
 # Init ENV
-ENV BISERVER_VERSION 5.4
-ENV BISERVER_TAG 5.4.0.1-130
+ENV BISERVER_VERSION 6.1
+ENV BISERVER_TAG 6.1.0.1-196
 
 ENV PENTAHO_HOME /opt/pentaho
 
@@ -40,6 +40,6 @@ RUN /usr/bin/wget --progress=dot:giga http://downloads.sourceforge.net/project/p
 COPY config $PENTAHO_HOME/config
 COPY scripts $PENTAHO_HOME/scripts
 
-WORKDIR /opt/pentaho 
-EXPOSE 8080 
+WORKDIR /opt/pentaho
+EXPOSE 8080
 CMD ["sh", "scripts/run.sh"]
